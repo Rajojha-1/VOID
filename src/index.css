@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body {
+  margin: 0;
+  background: black;
+  color: limegreen;
+  font-family: monospace;
+}
+
+.terminal {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.terminal input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: limegreen;
+  font-family: monospace;
+  width: 80%;
+}
+
+.command {
+  color: limegreen;
+}
+
+.result {
+  color: lightgray;
+  margin-left: 20px;
+}
