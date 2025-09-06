@@ -1,6 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Terminal from './pages/terminal.jsx';
 import Home from './pages/home.jsx';
+import Blogs from './pages/blogs.jsx';
+import Achievements from './pages/achievement.jsx';
+import AboutUs from './pages/about-Us.jsx';
+import Resources from './pages/resources.jsx';
+import ContactUs from './pages/contact-Us.jsx';
 import './App.css';
 
 function App() {
@@ -9,6 +14,11 @@ function App() {
       <Routes>
         <Route path="/terminal" element={<Terminal />} />
         <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/achievements" element={<Achievements />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </Router>
   );
