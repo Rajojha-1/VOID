@@ -1,38 +1,25 @@
-import { Link } from 'react-router-dom';
-import authService from './../store/authService';
-
-const Navbar = ({ user, onLogout }) => {
+import React from "react";
+import "./../index.css";
+import void_logo from "./../assets/Void Society logo.svg";
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <div className="navbar-brand">
-          <Link to="/" className="brand-link">
-            <span className="brand-icon"></span>
-            VOID Society
-          </Link>
-        </div>
-        
-        <div className="navbar-menu">
-          <Link to="/" className="nav-link">Home</Link>
-          {user ? (
-            <>
-              <Link to="/terminal" className="nav-link">CLI</Link>
-              <Link to="/blogs" className="nav-link">Blogs</Link>
-              <div className="user-menu">
-                <span className="user-name">Welcome, {user.username}</span>
-                <button onClick={onLogout} className="logout-btn">Logout</button>
-              </div>
-            </>
-          ) : (
-            <>
-              <Link to="/login" className="nav-link">Login</Link>
-              <Link to="/register" className="nav-link">Register</Link>
-            </>
-          )}
-        </div>
-      </div>
-    </nav>
-  );
-};
+    <div className="navbar_about">
+      <img
+        src={void_logo}
+        alt="Logo"
+        className="navbar_logo"
+      />
 
-export default Navbar;
+      <div className="navbar_about_left">
+        <a href="index.html" className="navbar_link">Home</a>
+        <a href="about.html" className="navbar_link">About</a>
+        <a href="contact.html" className="navbar_link">Contact</a>
+      </div>
+
+      <div className="navbar_about_right">
+        <a href="login.html" className="navbar_link">Sign Up</a>
+        <a href="signup.html" className="navbar_link">Login</a>
+      </div>
+    </div>
+  );
+}
