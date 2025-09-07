@@ -3,32 +3,30 @@ import kali from "./../assets/web.svg";
 import Navbar from "./../components/navbar";
 export default function VoidPage() {
   return (
-    <div className="w-full">
+    <div className="">
       <Navbar />
       {/* About Description */}
-      <div className="about_desc z-30">
-        <div className="about-club">
-          <h1
-            className="about-club-h1 relative  
-              bg-gradient-to-br from-white from-30% via-[#d5d8f6] via-80% to-[#fdf7fe] 
-              bg-clip-text font-title text-[84px] font-semibold leading-[0.9] tracking-tight 
-              text-transparent"
-          >
-            Enter into the Cyber Arena with VOID
-          </h1>
-          <h1 className="text-white absolute z-30">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            nemo soluta totam commodi atque quod! Culpa quo consectetur quae
-            ipsam.
-          </h1>
-        </div>
-      </div>
+<div className="about_desc z-30">
+  <div className="about-club ">
+    <h1 className="about-club-h1 ">
+      Enter into the Cyber Arena with VOID
+    </h1>
+    <p className="text-sm text-white  max-w-[60ch] ">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+      nemo soluta totam commodi atque quod! Culpa quo consectetur quae
+      ipsam.
+    </p>
+        <button className="mt-6 bg-blue-500 text-white px-4 py-2 rounded">
+      Get Started
+    </button>
+  </div>
+</div>
+
 
       {/* Kali SVG */}
       <div className="kali_svg_div">
-        <img src={kali} alt="kali" className="kali_svg" />
+      <img src={kali} alt="kali" className="kali_svg" />
       </div>
-
       {/* Spotlight */}
       <div className="spotlight">
         <img

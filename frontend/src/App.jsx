@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Terminal from './pages/terminal.jsx';
+import TerminalPage from './pages/terminal.jsx';
 import Home from './pages/home.jsx';
 import Blogs from './pages/blogs.jsx';
 import Achievements from './pages/achievement.jsx';
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/terminal" element={<Terminal />} />
+        <Route path="/terminal" element={<TerminalPage />} />
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/achievements" element={<Achievements />} />

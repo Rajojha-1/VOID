@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import fileService from "./../store/fileService";
+import Navbar from "./../components/navbar";
+import "./../index.css";
 
-export default function Terminal() {
+function TerminalComponent() {
   const [history, setHistory] = useState([]);
   const [input, setInput] = useState("");
   const [historyIndex, setHistoryIndex] = useState(null);
@@ -254,6 +256,15 @@ export default function Terminal() {
           />
         </form>
       </div>
+    </div>
+  );
+}
+
+export default function TerminalPage() {
+  return (
+    <div className="terminal-page-container top-0 left-0 w-full h-full">
+      <Navbar />
+      <TerminalComponent />
     </div>
   );
 }

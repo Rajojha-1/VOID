@@ -1,5 +1,6 @@
 import React from "react";
 import "./../index.css";
+import { Link } from "react-router-dom";
 import void_logo from "./../assets/Void Society logo.svg";
 export default function Navbar() {
   return (
@@ -11,14 +12,14 @@ export default function Navbar() {
       />
 
       <div className="navbar_about_left">
-        <a href="index.html" className="navbar_link">Home</a>
-        <a href="about.html" className="navbar_link">About</a>
-        <a href="contact.html" className="navbar_link">Contact</a>
+        <Link to="/" className="navbar_link">Home</Link>
+        <Link to="/about-us" className="navbar_link">About</Link>
+        <Link to="/contact-us" className="navbar_link">Contact</Link>
       </div>
 
       <div className="navbar_about_right">
-        <a href="login.html" className="navbar_link">Sign Up</a>
-        <a href="signup.html" className="navbar_link">Login</a>
+        <Link to="/resources" className="navbar_link">Resources</Link>
+        <Link to="/terminal" className="navbar_link">CLI</Link>
       </div>
     </div>
   );
