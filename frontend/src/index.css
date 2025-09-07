@@ -80,6 +80,39 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   text-wrap: balance;
 }
+.about-button {
+  all: unset;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  width: 20%;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.about-button::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 150px;   /* fixed size (circle) */
+  height: 150px;
+  border-radius: 50%; /* ensures circular shape */
+  background: radial-gradient(circle, rgba(59,130,246,0.8) 0%, rgba(59,130,246,0.2) 40%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.about-button:hover::before {
+  opacity: 1;
+}
 
 .kali_svg_div{
   position: absolute;
@@ -90,10 +123,11 @@ body::-webkit-scrollbar {
   z-index: 20;
 }
 
-.kali_svg{
+.kali_svg {
   width: 100%;
   height: 100%;
   animation: cyberpunkOff 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px #3b82f6) blur(1px) drop-shadow(0 0 20px #3b82f6);
 }
 @keyframes cyberpunkOff {
   0%   { opacity: 1; }
@@ -248,10 +282,10 @@ body::-webkit-scrollbar {
 
 /* Terminal Page Container */
 .terminal-page-container {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #000;
 }
 

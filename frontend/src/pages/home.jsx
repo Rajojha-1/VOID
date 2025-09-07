@@ -1,6 +1,32 @@
 import React from "react";
 import kali from "./../assets/web.svg";
 import Navbar from "./../components/navbar";
+import { useRef } from "react";
+
+function GlowingButton() {
+  const btnRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const rect = btnRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // update CSS variables dynamically
+    btnRef.current.style.setProperty("--x", `${x}px`);
+    btnRef.current.style.setProperty("--y", `${y}px`);
+  };
+
+  return (
+    <button
+      ref={btnRef}
+      className="about-button mt-6 bg-blue-500 text-white px-4 py-2 rounded"
+      onMouseMove={handleMouseMove}
+    >
+      Get Started
+    </button>
+  );
+}
+
 export default function VoidPage() {
   return (
     <div className="">
@@ -16,9 +42,8 @@ export default function VoidPage() {
       nemo soluta totam commodi atque quod! Culpa quo consectetur quae
       ipsam.
     </p>
-        <button className="mt-6 bg-blue-500 text-white px-4 py-2 rounded">
-      Get Started
-    </button>
+        {/* glowing button */}
+       <GlowingButton />
   </div>
 </div>
 
