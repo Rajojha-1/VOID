@@ -29,6 +29,7 @@ function GlowingButton() {
 
 export default function VoidPage() {
   return (
+    
     <div className="">
       <Navbar />
       {/* About Description */}
@@ -46,6 +47,15 @@ export default function VoidPage() {
        <GlowingButton />
   </div>
 </div>
+
+
+
+{/* testing tailwind */}
+{/* <div className="bg-blue-500 text-green-500 p-4 m-4 rounded-lg shadow-lg">
+  This div should have a blue background, white text, padding, margin, rounded corners, and a shadow if Tailwind is working correctly.
+</div> */}
+
+
 
 
       {/* Kali SVG */}
