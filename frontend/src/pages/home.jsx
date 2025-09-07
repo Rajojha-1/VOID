@@ -67,16 +67,21 @@ export default function VoidPage() {
         <div className="spotlight_chupao"></div>
       </div>
 
-      {/* Kali Distro Overview */}
-      <div className="kali_distro_overview z-10 absolute top-[110%] left-[10%] w-[65%] h-auto flex justify-center items-center rounded-xl overflow-hidden shadow-lg">
-        <video
-          src="/assets/video/distro.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-        ></video>
-      </div>
+
+{/* IRC Section */}
+<div className="irc-section">
+  <div className="irc-panel-container">
+    {/* IRC client will go here */}
+    <div className="irc-panel"></div>
+  </div>
+  <div className="irc-text-container">
+    <h2 className="irc-heading">Join our IRC Channel</h2>
+    <p className="irc-description max-w-[30ch]">
+    And be part of our vibrant community. Connect, collaborate, and share your passion for cybersecurity with like-minded individuals.
+
+</p>
+  </div>
+  </div>
 
       {/* About Us */}
       <div className="about_us bg-[#f5f5f6] text-black w-full h-[240px] flex justify-center items-center text-2xl font-poppins">
