@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
+import Footer from "./../components/footer";
 import './../index.css';
 
 // Simple Checkmark SVG for success animation
@@ -22,11 +23,14 @@ const FaqItem = ({ question, answer, isOpen, onClick }) => (
     </div>
   </div>
 );
-
 export default function ContactUs() {
+  // State for form fields
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  // State for form validation errors
   const [errors, setErrors] = useState({});
+  // State to track if form is submitted
   const [isSubmitted, setIsSubmitted] = useState(false);
+  // State to track which FAQ is open
   const [openFaq, setOpenFaq] = useState(null);
 
   const faqs = [
@@ -180,6 +184,7 @@ export default function ContactUs() {
           <h2>Still have questions?</h2>
           <a href="mailto:contact@void.sec" className="join-us-button">Let's Connect</a>
         </section>
+              <Footer />
       </div>
     </>
   );

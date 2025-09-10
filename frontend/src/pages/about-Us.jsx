@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/navbar';
 import './../index.css';
+import Footer from "./../components/footer";
 import { Link } from 'react-router-dom';
 
 // Custom Hook for observing elements and adding a 'visible' class
@@ -68,9 +69,9 @@ export default function AboutUs() {
   ];
 
   const teamMembers = [
-    { name: 'R.O.J', role: 'Founder & Lead', imageUrl: 'https://via.placeholder.com/150' },
-    { name: 'Jane Doe', role: 'CTF Architect', imageUrl: 'https://via.placeholder.com/150' },
-    { name: 'Alex Smith', role: 'Community Manager', imageUrl: 'https://via.placeholder.com/150' },
+    { name: 'Suryansh Deshwal', role: 'Founder & Lead', imageUrl: 'https://via.placeholder.com/150' },
+    { name: 'Ambar Chakravartty', role: 'President', imageUrl: 'https://via.placeholder.com/150' },
+    { name: 'Kanishka', role: 'President', imageUrl: 'https://via.placeholder.com/150' },
   ];
 
   return (
@@ -85,7 +86,7 @@ export default function AboutUs() {
         <section ref={philosophyRef} className="about-section fade-in-up">
           <h2 className="section-title">Our Philosophy</h2>
           <p className="section-content">
-            At VOID, we believe that true security comes from understanding, not just defending. We are a collective of hackers, researchers, and builders dedicated to pushing the boundaries of cybersecurity. Our mission is to demystify the complex, share knowledge openly, and empower the next generation of digital guardians.
+        VOID Society, under the Centre of Excellence, is our institute’s dedicated cybersecurity club driven entirely by students. We go beyond textbooks by teaching and exploring real-world skills such as Linux, networking, ethical hacking, OSINT, penetration testing, and digital forensics. Our members learn through hands-on bootcamps, capture-the-flag challenges, workshops, and awareness campaigns, making cybersecurity both practical and exciting. We also host Null Chapter meetups and collaborate with industry professionals, creating direct pathways for internships and jobs. At VOID, students build, break, secure, and grow together as part of an active, ever-learning cybersecurity community.
           </p>
         </section>
 
@@ -112,6 +113,7 @@ export default function AboutUs() {
           <p className="section-content">Become part of a community that challenges the status quo.</p>
           <Link to="/contact-us" className="join-us-button">Join Us</Link>
         </section>
+              <Footer />
       </div>
     </>
   );
